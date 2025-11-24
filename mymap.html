@@ -13,9 +13,12 @@
 <p>This is a paragraph of text with a <a href="https://uni-tuebingen.de/">hyperlink</a>.</p>
 <p>This is a paragraph of text with a <a href="https://www.youtube.com/watch?v=vgLaCUzRvQU">hyperlink</a>.</p>
 <div id="mapid" style="width: 600px; height: 400px; position: relative;"></div>
+<div id="mapid1" style="width: 600px; height: 400px; position: relative;"></div>
 <script>
 var mymap = L.map('mapid').setView([48.5239,9.05525]).setZoom(20);
 L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png').addTo(mymap);
+var mymap = L.map('mapid1').setView([48.5239,9.05525]).setZoom(20);
+L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_watercolor/{z}/{x}/{y}.{ext}').addTo(mymap);
 </script>
 </body>
 </html>
