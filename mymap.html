@@ -17,8 +17,15 @@
 <script>
 var mymap = L.map('mapid').setView([48.5239,9.05525]).setZoom(20);
 L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png').addTo(mymap);
-var mymap1 = L.map('mapid1').setView([0,0]).setZoom(1);
-L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_watercolor/{z}/{x}/{y}.{ext}').addTo(mymap);
+var mymap1 = L.map('mapid1').setView([48.5234,9.05510]).setZoom(15);
+var OpenTopoMap = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+	maxZoom: 17,
+	attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
+}).addTo(mymap1);
+var markBota = L.marker([48.523549, 9.057546]).addTo(mymap);
+markBota.bindPopup("<p>This is the Old Botanical Garden</p>");
+var markBota1 = L.marker([48.523755, 9.057730]).addTo(mymap);
+markBota1.bindPopup("<p>https://www.pinterest.com/pin/457959855830009658/</p>");
 </script>
 </body>
 </html>
